@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+</head>
+<body>
+	<center>
+
+		<h1>회원가입 페이지</h1>
+		<hr>
+		<form th:action="@{/member/inroll}" method="post" th:object="${memberFormDto}" >
+			<table style="margin-top:200px;margin-bottom:200px;">
+
+				<tr>
+					<td>아이디</td> <td><input type="text" th:field="*{mName}" ></td>
+				</tr>
+
+				<tr>
+					<td>비밀번호1</td> <td><input type="password" th:field="*{mPassword}" ></td>
+				</tr>
+
+				<tr>
+					<td>비밀번호2</td> <td><input type="password" th:field="*{mPasswordConf}" ></td>
+				</tr>
+
+				<tr>
+					<td>이메일</td> <td><input type="email" th:field="*{email}" ></td>
+				</tr>
+
+				<tr>
+					<td>주소</td> <td><input type="text" th:field="*{addr}" ></td>
+				</tr>
+				<tr>
+					<td align="center" colspan=2><button type="submit">등록</button></td>
+				</tr>
+			</table>
+		</form>
+		<hr>
+	</center>
+</body>
+</html>
